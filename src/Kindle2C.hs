@@ -37,7 +37,7 @@ module Kindle2C(kindle2c) where
 import Common
 import Kindle
 import PP
-import Char
+import Data.Char
 import Depend
 
 kindle2c m                      = return (render h, render c)

@@ -35,7 +35,7 @@ module Fixity where
 
 import Common
 import Syntax
-import List(sort)
+import Data.List(sort)
 
 type Precedence         = Int
 data Associativity      = LeftAss | RightAss | NonAss deriving (Eq,Show)

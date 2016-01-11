@@ -35,9 +35,9 @@ module Main where
 
 -- Haskell98
 import System.IO (getArgs)
-import List(isSuffixOf)
-import qualified Monad
-import qualified Char
+import Data.List(isSuffixOf)
+import qualified Control.Monad
+import qualified Data.Char
 import qualified Control.Exception as Exception ( catch, catchJust )
 import System.Console.GetOpt
 import qualified System.Directory

@@ -33,7 +33,7 @@
 
 module Token where
 
-import Char
+import Data.Char
 
 
 data Token 

@@ -35,8 +35,8 @@ module Match where
 
 import Common
 import Syntax
-import Monad
-import qualified List
+import Control.Monad
+import qualified Data.List
 
 pmc :: Exp -> [Alt Exp] -> M s Exp
 pmc e alts                      = do e' <- match0 e alts

@@ -35,7 +35,7 @@
 
 module Kindlered where
 
-import Monad
+import Control.Monad
 import Common
 import Kindle
 import PP

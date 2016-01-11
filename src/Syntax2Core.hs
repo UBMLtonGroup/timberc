@@ -36,7 +36,7 @@ module Syntax2Core where
 
 import Common
 import Syntax
-import Monad
+import Control.Monad
 import qualified Core
 import PP
 

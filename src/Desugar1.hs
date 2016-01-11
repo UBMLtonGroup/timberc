@@ -35,8 +35,8 @@
 
 module Desugar1 where
 
-import List(sort, sortBy)
-import Monad
+import Data.List(sort, sortBy)
+import Control.Monad
 import Common
 import Syntax
 import Depend

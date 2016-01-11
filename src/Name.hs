@@ -35,11 +35,11 @@
 module Name where
 
 import Debug.Trace
-import List
+import Data.List as List
 import PP
 import Token
 import Data.Char
-import Maybe
+import Data.Maybe
 import Data.Typeable
 import Data.Binary 
 

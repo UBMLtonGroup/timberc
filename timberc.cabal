@@ -58,7 +58,7 @@ Executable timberc
   Main-is:           Main.hs
   Build-Depends:     base >= 4, pretty >= 1.0.0.0, binary >= 0.4.2, 
                      mtl >= 1.1, filepath >= 1.1, array >= 0.1,
-                     bzlib >= 0.4.0.0, bytestring >= 0.9
+                     bzlib >= 0.4.0.0, bytestring >= 0.9, directory >= 1.2.2.0
   build-tools:	     happy >= 1.18
   hs-source-dirs:    src
   other-modules:     Common,

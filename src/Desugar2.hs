@@ -33,11 +33,11 @@
 
 module Desugar2(desugar2) where
 
-import Monad
+import Control.Monad
 import Common
 import Syntax
 import Match
-import Maybe
+import Data.Maybe
 import Fixity
 import PP
 

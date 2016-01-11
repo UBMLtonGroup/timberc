@@ -48,7 +48,7 @@ module Execution (
                  ) where
     
 import System.IO                 (system, exitWith, ExitCode(..))
-import qualified Monad
+import qualified Control.Monad
 import qualified System.Directory
 import Common
 

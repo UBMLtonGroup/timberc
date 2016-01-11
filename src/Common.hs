@@ -36,10 +36,10 @@
 module Common (module Common, module Name, isDigit) where
 
 import PP
-import qualified List
-import qualified Maybe
+import qualified Data.List
+import qualified Data.Maybe
 import Control.Exception
-import Char
+import Data.Char
 import Config
 import Name
 import Data.Typeable

@@ -37,8 +37,8 @@ import Common
 import Core
 import Env
 import Depend
-import List(unzip4, zipWith3)
-import Monad
+import Data.List(unzip4, zipWith3)
+import Control.Monad
 import Kind
 import Decls
 import Reduce

@@ -48,12 +48,12 @@ This module does the following:
     identifier, or possibly replacing a Name with a Prim.
 -}
 
-import Monad
+import Control.Monad
 import Common
 import Syntax
 import Depend
 import PP
-import List(sort)
+import Data.List(sort)
 
 renameM e1 m                       = rename (initEnv e1) m
                                 

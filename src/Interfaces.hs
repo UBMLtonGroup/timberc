@@ -34,7 +34,7 @@
 module Interfaces where
 
 import Common
-import List (isPrefixOf)
+import Data.List (isPrefixOf)
 import Data.Binary
 import Rename 
 import Core

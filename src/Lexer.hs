@@ -72,8 +72,8 @@ module Lexer (Token(..), lexer, readInteger, readNumber, readRational) where
 
 
 import ParseMonad
-import Char
-import Ratio
+import Data.Char
+import Data.Ratio
 import Token
 import Common
 
