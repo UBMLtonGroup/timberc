@@ -35,7 +35,7 @@
 
 module Kindle where
 
-import Monad
+import Control.Monad
 import Common
 import PP
 import qualified Core

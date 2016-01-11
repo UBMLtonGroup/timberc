@@ -71,9 +71,9 @@ module Config (
                ) where
 
 
-import Char
+import Data.Char
 import System.Console.GetOpt
-import System                 ( getArgs, getEnv, getProgName )
+import System.IO                 ( getArgs, getEnv, getProgName )
 import qualified Control.Exception as Exception
 import Data.Dynamic
 

@@ -38,7 +38,7 @@ import Debug.Trace
 import List
 import PP
 import Token
-import Char
+import Data.Char
 import Maybe
 import Data.Typeable
 import Data.Binary 

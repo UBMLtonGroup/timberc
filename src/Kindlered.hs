@@ -39,7 +39,7 @@ import Monad
 import Common
 import Kindle
 import PP
-import System
+import System.IO
 
 kindlered ds m                          = redModule ds m
 

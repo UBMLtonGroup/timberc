@@ -36,7 +36,7 @@
 module PP (module PP, module Text.PrettyPrint) where
 
 import Text.PrettyPrint hiding (TextDetails(..))
-import Char(showLitChar)
+import Data.Char(showLitChar)
 
 
 class Pr a where

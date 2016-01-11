@@ -35,11 +35,11 @@
 
 module Termred(termred, redTerm, isFinite, constrs) where
 
-import Monad
+import Control.Monad
 import Common
 import Core
 import PP
-import Char
+import Data.Char
 
 termred (_,ds',_,bs') m         = redModule ds' (eqnsOf bs') m
 

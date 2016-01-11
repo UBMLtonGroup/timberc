@@ -39,7 +39,7 @@ import Common
 import PP
 import Data.Typeable
 import Data.Binary
-import Monad
+import Control.Monad
 
 
 data Module     = Module Name [(Bool,Name)] [Default Scheme] Types [Name] [Binds]

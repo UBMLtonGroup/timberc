@@ -39,7 +39,7 @@ import Core
 import Env
 import Derive
 import Depend
-import Monad
+import Control.Monad
 
 kindcheck m                             = kiModule m
 

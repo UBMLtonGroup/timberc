@@ -1,7 +1,7 @@
 #! /usr/bin/env runhaskell
 
  
-> import System.Cmd
+> import System.Process
 > import System.Directory
 > import System.FilePath
 

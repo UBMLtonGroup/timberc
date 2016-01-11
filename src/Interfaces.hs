@@ -45,10 +45,10 @@ import qualified Core2Kindle
 import qualified Kindle 
 import Termred
 import qualified Config
-import System
+import System.IO
 import Codec.Compression.BZip 
 import qualified Data.ByteString.Lazy
-import Directory
+import System.Directory
 
 decodeCFile ti_file     = do str <- Data.ByteString.Lazy.readFile ti_file
                              return(decode(decompress str)) 

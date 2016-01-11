@@ -35,7 +35,7 @@
 
 module Core2Kindle(core2kindle, c2kTEnv) where
 {- -}
-import Monad
+import Control.Monad
 import Common
 import Core
 import Name
