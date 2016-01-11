@@ -1,0 +1,12 @@
+
+https://mail.haskell.org/pipermail/timber/2009-May.txt
+
+ cabal install --global happy 
+ runhaskell Setup.lhs configure --user
+
+haskel98 package status:
+
+ http://comments.gmane.org/gmane.comp.lang.haskell.cafe/118536
+
+
+
