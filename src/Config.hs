@@ -1,3 +1,5 @@
+{-# LANGUAGE StandaloneDeriving #-}
+
 -- The Timber compiler <timber-lang.org>
 --
 -- Copyright 2008-2009 Johan Nordlander <nordland@csee.ltu.se>
@@ -71,6 +73,7 @@ module Config (
                ) where
 
 
+import Data.Typeable as Typeable
 import Data.Char as Char
 import System.Console.GetOpt
 import System.Environment   as System              ( getArgs, getEnv, getProgName )
@@ -205,8 +208,9 @@ data TimbercException
   | Panic String            -- Unexpected faults in timberc, panic.
   deriving (Eq)
 
-instance Typeable TimbercException where
-  typeOf _ = mkTyConApp (mkTyCon "TimbercException") []
+deriving instance Typeable TimbercException
+-- instance Typeable TimbercException where
+--   typeOf _ = mkTyConApp (mkTyCon "TimbercException") []
 
 -- | Let us show our exceptions as expected.
 instance Show TimbercException where
@@ -218,11 +222,11 @@ instance Show TimbercException where
 instance Exception.Exception TimbercException
 
 cmdLineOpts          :: [String] -> IO (CmdLineOpts,[String])
-cmdLineOpts args     = do pager <- System.getEnv "PAGER" `catch` (\_ -> return "")
+cmdLineOpts args     = do pager <- System.getEnv "PAGER" `Exception.catch` (\_ -> return "")
                           let pagerOpt = if null pager then [] else ["--pager", pager]
-                          home <- System.getEnv "HOME" `catch` (\_ -> return "")
-                          cfgFile <- System.getEnv "TIMBERC_CFG" `catch` (\_ -> return (home ++ "/.timberc"))
-                          cfgOpts <- readFile cfgFile `catch` (\_ -> return "")
+                          home <- System.getEnv "HOME" `Exception.catch` (\_ -> return "")
+                          cfgFile <- System.getEnv "TIMBERC_CFG" `Exception.catch` (\_ -> return (home ++ "/.timberc"))
+                          cfgOpts <- readFile cfgFile `Exception.catch` (\_ -> return "")
                           case getOpt Permute options (args ++ words cfgOpts ++ pagerOpt) of
                             (flags,n,[]) 
                               | Help `elem` flags -> do 
@@ -285,7 +289,7 @@ readCfg clo = parseCfg (rtsCfg clo)
 -- | Internal help routine for readCfg.
 parseCfg file
     = do
-      txt <- catch (readFile file)
+      txt <- Exception.catch (readFile file)
              (\e -> Exception.throwIO $ emsg file)
       config <- safeRead file txt
       return config

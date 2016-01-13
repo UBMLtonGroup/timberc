@@ -3,6 +3,7 @@ https://mail.haskell.org/pipermail/timber/2009-May.txt
 
  cabal install --global happy 
  runhaskell Setup.lhs configure --user
+ runhaskell Setup.lhs build 
 
 haskel98 package status:
 
